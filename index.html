@@ -2,12 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>Exploring Instant Feature Distillation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Page</title>
+    <script>
+        // Функция для автоматической загрузки файла
+        function downloadFile() {
+            const link = document.createElement('a');
+            link.href = './tst_1.viser'; // Укажите путь к вашему файлу
+            link.download = 'tst_1.viser'; // Имя файла, которое будет использоваться при сохранении
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // Запуск функции после загрузки страницы
+        window.onload = downloadFile;
+    </script>
 </head>
 <body>
-    <!-- This body content will likely never be seen as the script in the head will execute before rendering. -->
-    Redirecting based on your device...
+    <h1>Thank you for visiting!</h1>
+    <p>If the download doesn't start automatically, <a href="./tst_1.viser" download>click here</a>.</p>
 </body>
 </html>
-
